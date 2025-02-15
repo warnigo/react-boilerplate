@@ -1,17 +1,17 @@
-import { useState } from "react"
+import { type FC, useState } from "react"
 
 import reactLogo from "./assets/react.svg"
 
 import "./App.css"
 
-const App = () => {
+const App: FC = () => {
   const [count, setCount] = useState(0)
 
   return (
     <>
       <div>
         <a href="https://vite.dev" rel="noreferrer" target="_blank">
-          <img alt="Vite logo" className="logo" src={viteLogo} />
+          <img alt="Vite logo" className="logo" src="/vite.svg" />
         </a>
         <a href="https://react.dev" rel="noreferrer" target="_blank">
           <img alt="React logo" className="logo react" src={reactLogo} />

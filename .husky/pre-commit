@@ -1,0 +1,12 @@
+pnpm lint
+pnpm types
+pnpm format
+
+if git diff --staged --quiet; then
+  echo "No changes to commit after formatting."
+  exit 1
+else
+  echo "Changes detected. Staging and committing formatted code."
+  git add .
+  exit 0
+fi

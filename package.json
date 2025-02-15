@@ -4,10 +4,21 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "node scripts/reactor.mjs --dev && vite",
+    "build": "node scripts/reactor.mjs --build && tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "lint:fix": "eslint . --fix",
+    "preview": "vite preview",
+    "prepare": "pnpm generate:env --env=development && husky",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "types": "tsc --noEmit",
+    "typecheck": "tsc --noEmit --incremental false",
+    "clean": "trash build && trash node_modules && rm -rf pnpm-lock.yaml",
+    "clean:build": "trash build",
+    "clean:cache": "trash node_modules/.vite",
+    "reboot": "pnpm clean && pnpm install",
+    "generate:env": "node scripts/generateEnv.mjs"
   },
   "dependencies": {
     "react": "^19.0.0",
@@ -25,6 +36,7 @@
     "@typescript-eslint/parser": "^8.24.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.20",
+    "chalk": "^5.4.1",
     "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-import-resolver-typescript": "^3.8.0",

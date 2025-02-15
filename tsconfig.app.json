@@ -42,6 +42,6 @@
     ".next/types/**/*.ts",
     "eslint.config.mjs",
     "postcss.config.mjs",
-    "scripts/reactor.mjs"
+    "scripts/**/*.mjs"
   ]
 }
