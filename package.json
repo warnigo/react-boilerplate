@@ -9,16 +9,16 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "preview": "vite preview",
-    "prepare": "pnpm generate:env --env=development && husky",
+    "prepare": "husky",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "types": "tsc --noEmit",
     "typecheck": "tsc --noEmit --incremental false",
-    "clean": "trash build && trash node_modules && rm -rf pnpm-lock.yaml",
+    "clean": "trash node_modules && rm -rf pnpm-lock.yaml",
     "clean:build": "trash build",
     "clean:cache": "trash node_modules/.vite",
     "reboot": "pnpm clean && pnpm install",
-    "generate:env": "node scripts/generateEnv.mjs"
+    "generate:env": "node scripts/generateEnv.mjs --env=development"
   },
   "dependencies": {
     "react": "^19.0.0",

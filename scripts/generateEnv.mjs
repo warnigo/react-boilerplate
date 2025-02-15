@@ -1,6 +1,6 @@
 import chalk from "chalk"
-import fs from "fs/promises"
-import path from "path"
+import fs from "node:fs/promises"
+import path from "node:path"
 
 const ROOT = process.cwd()
 const ENV_SOURCE = path.resolve(ROOT, ".env.example")
@@ -99,7 +99,9 @@ async function main() {
   if (!envArg) {
     console.error(chalk.red("Error: No environment specified."))
     console.info(
-      chalk.yellow("Usage: node script.js --env=<development|production>"),
+      chalk.yellow(
+        "Usage: node generateEnv.mjs --env=<development|production>",
+      ),
     )
     process.exit(1)
   }
@@ -114,9 +116,9 @@ async function main() {
   const { path: envPath, content } = ENV_FILES[env]
 
   try {
+    await checkSourceFileAccess(ENV_SOURCE)
     const mergedContent = await mergeContent(ENV_SOURCE, content)
     await writeFile(envPath, mergedContent)
-    await checkSourceFileAccess(ENV_SOURCE)
 
     console.info(
       chalk.green(
