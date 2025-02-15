@@ -1,50 +1,14 @@
-# React + TypeScript + Vite
+<h1 align="center">
+  <samp>REACT BIOLERPLATE</samp>
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <samp>
+  A clean and scalable React boilerplate powered by Vite and TypeScript, following the Feature-Sliced Design (FSD) architecture. Styled with SCSS for modularity and maintainability. The project is structured with Git Flow, ensuring a smooth and organized development process.</samp>
+</p>
 
-Currently, two official plugins are available:
+<div align="center">
+    <img alt="GitHub package.json version (branch)" src="https://img.shields.io/github/package-json/v/Warnigo/react-boilerplate/main?style=flat&label=version&labelColor=%2320222d&color=%23e8e8e4&logo=tag&logoColor=%23ffffff">
+    <img alt="GitHub License" src="https://img.shields.io/github/license/Warnigo/react-boilerplate?style=flat&label=license&labelColor=%2320222d&color=%23e8e8e4&logo=github&logoColor=%23ffffff">
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from "eslint-plugin-react"
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules,
-  },
-})
-```
+</div>
