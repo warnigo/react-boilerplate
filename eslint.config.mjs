@@ -1,4 +1,3 @@
-/* eslint-disable import/default */
 import {
   fixupConfigRules,
   fixupPluginRules,
@@ -7,7 +6,7 @@ import {
 import { FlatCompat } from "@eslint/eslintrc"
 import js from "@eslint/js"
 import typescriptEslint from "@typescript-eslint/eslint-plugin"
-import tsParser from "@typescript-eslint/parser"
+import * as tsParser from "@typescript-eslint/parser"
 import importPlugin from "eslint-plugin-import"
 import jsxA11y from "eslint-plugin-jsx-a11y"
 import noSecret from "eslint-plugin-no-secrets"
