@@ -1,5 +1,5 @@
-# Get commit message from COMMIT_EDITMSG
-commit_msg=$(cat .git/COMMIT_EDITMSG)
+# Get the commit message from the message being prepared
+commit_msg=$(head -n 1 "$1")
 
 # Function to check if commit message matches pattern
 check_commit_type() {
@@ -41,6 +41,9 @@ if ! check_commit_type; then
     exit 1
 fi
 
+# For debugging - print the commit type
+echo "📝 Commit type: $commit_msg"
+
 # Determine which checks to run
 determine_checks
 
@@ -55,10 +58,10 @@ if [ "$run_types" = true ]; then
     pnpm types || exit 1
 fi
 
-# if [ "$run_tests" = true ]; then
-#     echo "🧪 Running tests..."
-#     pnpm test || exit 1
-# fi
+if [ "$run_tests" = true ]; then
+    echo "🧪 Running tests..."
+    pnpm test || exit 1
+fi
 
 if [ "$run_format" = true ]; then
     echo "✨ Formatting code..."
