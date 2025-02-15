@@ -423,6 +423,15 @@ const eslintConfig = [
       "security/detect-unsafe-regex": "error",
     },
   },
+  {
+    files: ["scripts/**/*.js", "*scripts/**/*.mjs"],
+    rules: {
+      "@typescript-eslint/no-var-requires": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "no-secrets/no-secrets": "off",
+      "security/detect-non-literal-fs-filename": "off",
+    },
+  },
 ]
 
 export default eslintConfig
