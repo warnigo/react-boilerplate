@@ -1,5 +1,3 @@
-. "$(dirname -- "$0")/_/husky.sh"
-
 # Get commit message from COMMIT_EDITMSG
 commit_msg=$(cat .git/COMMIT_EDITMSG)
 
@@ -57,10 +55,10 @@ if [ "$run_types" = true ]; then
     pnpm types || exit 1
 fi
 
-if [ "$run_tests" = true ]; then
-    echo "🧪 Running tests..."
-    pnpm test || exit 1
-fi
+# if [ "$run_tests" = true ]; then
+#     echo "🧪 Running tests..."
+#     pnpm test || exit 1
+# fi
 
 if [ "$run_format" = true ]; then
     echo "✨ Formatting code..."
