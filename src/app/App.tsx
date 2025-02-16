@@ -1,6 +1,8 @@
 import { type FC } from "react"
 
-const App: FC = () => <div>App</div>
+import { Provider } from "./providers"
+
+const App: FC = () => <Provider>salom</Provider>
 
 App.displayName = "App"
 export default App

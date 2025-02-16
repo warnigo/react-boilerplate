@@ -216,15 +216,8 @@ const eslintConfig = [
       "react-hooks/exhaustive-deps": "warn",
 
       // TypeScript rules
-      "@typescript-eslint/no-unused-vars": [
-        "error",
-        {
-          argsIgnorePattern: "^_",
-          varsIgnorePattern: "^_",
-          caughtErrorsIgnorePattern: "^_",
-          destructuredArrayIgnorePattern: "^_",
-        },
-      ],
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "off",
       "@typescript-eslint/no-unsafe-function-type": "off",
       "@typescript-eslint/explicit-function-return-type": [
         "error",
@@ -292,7 +285,7 @@ const eslintConfig = [
             [
               "^@app/*",
               "^@shared/*",
-              "^@views/*",
+              "^@pages/*",
               "^@helpers/*",
               "^@entities/*",
               "^@widgets/*",
@@ -326,7 +319,7 @@ const eslintConfig = [
       ],
       "unused-imports/no-unused-imports": "error",
       "unused-imports/no-unused-vars": [
-        "warn",
+        "error",
         {
           vars: "all",
           varsIgnorePattern: "^_",
