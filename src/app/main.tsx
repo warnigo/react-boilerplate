@@ -6,8 +6,8 @@ import App from "./App"
 
 import "./styles/globals.css"
 
-const ROOT = document.getElementById("root")!
-createRoot(ROOT).render(
+const root = document.getElementById("root")!
+createRoot(root).render(
   <StrictMode>
     <App />
   </StrictMode>,

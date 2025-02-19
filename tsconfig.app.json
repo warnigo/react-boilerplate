@@ -30,6 +30,7 @@
       "@shared/*": ["./src/shared/*"],
       "@helpers/*": ["./src/helpers/*"],
       "@entities/*": ["./src/entities/*"],
+      "@store/*": ["./src/store/*"],
       "@features/*": ["./src/features/*"],
       "@widgets/*": ["./src/widgets/*"]
     }

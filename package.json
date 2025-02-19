@@ -9,25 +9,29 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "preview": "vite preview",
-    "prepare": "pnpm generate:env --env=development && husky",
+    "prepare": "generate:env && husky",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "types": "tsc --noEmit",
     "typecheck": "tsc --noEmit --incremental false",
-    "clean": "trash build && trash node_modules && rm -rf pnpm-lock.yaml",
+    "clean": "trash node_modules && rm -rf pnpm-lock.yaml",
     "clean:build": "trash build",
     "clean:cache": "trash node_modules/.vite",
     "reboot": "pnpm clean && pnpm install",
-    "generate:env": "node scripts/generateEnv.mjs"
+    "generate:env": "node scripts/generateEnv.mjs --env=development"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.66.0",
+    "antd": "^5.24.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.6",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.19.0",
+    "@tanstack/react-query-devtools": "^5.66.0",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/node": "^22.13.4",
     "@types/react": "^19.0.8",
