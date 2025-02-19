@@ -1,5 +1,5 @@
 import react from "@vitejs/plugin-react-swc"
-import path from "path"
+import { resolve } from "path"
 import { defineConfig } from "vite"
 
 export default defineConfig({
@@ -8,14 +8,14 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      "@app": path.resolve(__dirname, "src/app"),
-      "@pages": path.resolve(__dirname, "src/pages"),
-      "@shared": path.resolve(__dirname, "src/shared"),
-      "@helpers": path.resolve(__dirname, "src/helpers"),
-      "@entities": path.resolve(__dirname, "src/entities"),
-      "@store": path.resolve(__dirname, "src/store"),
-      "@features": path.resolve(__dirname, "src/features"),
-      "@widgets": path.resolve(__dirname, "src/widgets"),
+      "@app": resolve(__dirname, "src/app"),
+      "@pages": resolve(__dirname, "src/pages"),
+      "@shared": resolve(__dirname, "src/shared"),
+      "@helpers": resolve(__dirname, "src/helpers"),
+      "@entities": resolve(__dirname, "src/entities"),
+      "@store": resolve(__dirname, "src/store"),
+      "@features": resolve(__dirname, "src/features"),
+      "@widgets": resolve(__dirname, "src/widgets"),
     },
   },
 })
