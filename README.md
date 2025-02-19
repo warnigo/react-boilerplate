@@ -14,5 +14,3 @@
     <img alt="scss" src="https://img.shields.io/badge/styles-scss-20222d?style=flat&logo=sass&logoColor=%23ffffff&labelColor=%2320222d&color=%23e8e8e4">
     <img alt="fsd" src="https://img.shields.io/badge/architecture-FSD-20222d?style=flat&logo=hexagon&logoColor=%23ffffff&labelColor=%2320222d&color=%23e8e8e4">
 </div>
-
-
