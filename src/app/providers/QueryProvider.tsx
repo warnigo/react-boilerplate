@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
 
-import { type FCRequiredChildren } from "@shared/types"
+import { type FCRC } from "@shared/types"
 
 const QUERY_RETRY_COUNT = 1
 const SECONDS_IN_MS = 1000
@@ -20,7 +20,7 @@ const queryClient = new QueryClient({
   },
 })
 
-export const QueryProvider: FCRequiredChildren = ({ children }) => (
+export const QueryProvider: FCRC = ({ children }) => (
   <QueryClientProvider client={queryClient}>
     {children}
 

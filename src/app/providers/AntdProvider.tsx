@@ -3,9 +3,9 @@ import { ConfigProvider, theme } from "antd"
 import en from "antd/locale/en_US"
 
 import { getTheme } from "@shared/antd"
-import { type FCRequiredChildren } from "@shared/types"
+import { type FCRC } from "@shared/types"
 
-export const AntdProvider: FCRequiredChildren = ({ children }) => {
+export const AntdProvider: FCRC = ({ children }) => {
   const { isDarkMode } = useThemeStore()
 
   // useEffect(() => {

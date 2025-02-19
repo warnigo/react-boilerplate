@@ -1,1 +1,1 @@
-export type { FCOptionalChildren, FCRequiredChildren } from "./children"
+export type { FCC, FCRC } from "./children"

@@ -1,8 +1,13 @@
-import { type FCRequiredChildren } from "@shared/types"
+import { Layout } from "antd"
+import { Content } from "antd/es/layout/layout"
 
-export const ProtectedLayout: FCRequiredChildren = ({ children }) => (
-  <div>
-    header
-    {children}
-  </div>
+import { type FCRC } from "@shared/types"
+import { Header } from "@widgets/Header"
+
+export const ProtectedLayout: FCRC = ({ children }) => (
+  <Layout>
+    <Header />
+
+    <Content>{children}</Content>
+  </Layout>
 )
