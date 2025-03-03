@@ -1,9 +1,10 @@
-import react from "@vitejs/plugin-react-swc"
+import { reactRouter } from "@react-router/dev/vite"
+import { TanStackRouterVite } from "@tanstack/router-plugin/vite"
 import { resolve } from "path"
 import { defineConfig } from "vite"
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [TanStackRouterVite({ autoCodeSplitting: true }), reactRouter()],
   clearScreen: false,
 
   resolve: {
