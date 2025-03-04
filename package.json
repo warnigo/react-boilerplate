@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node scripts/reactor.mjs --dev && vite",
+    "dev": "node scripts/reactor.mjs --dev && react-router dev",
     "build": "node scripts/reactor.mjs --build && tsc -b && vite build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -22,11 +22,15 @@
   },
   "dependencies": {
     "@react-router/fs-routes": "^7.2.0",
+    "@react-router/node": "^7.2.0",
     "@tanstack/react-query": "^5.66.0",
     "antd": "^5.24.0",
     "classnames": "^2.5.1",
+    "isbot": "^5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router": "^7.2.0",
+    "react-router-dom": "^7.2.0",
     "zustand": "^5.0.3"
   },
   "devDependencies": {
@@ -67,7 +71,9 @@
     "trash": "^9.0.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.22.0",
-    "vite": "^6.1.0"
+    "vite": "^6.2.0",
+    "vite-plugin-mkcert": "^1.17.7",
+    "vite-tsconfig-paths": "^5.1.4"
   },
   "engines": {
     "node": ">=20.0.0",

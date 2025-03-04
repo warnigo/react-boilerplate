@@ -9,6 +9,8 @@
 !.yarn/versions
 .yarn/install-state.gz
 
+.react-router
+
 # testing
 /coverage
 
