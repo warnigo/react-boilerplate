@@ -37,20 +37,20 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => (
       <meta content="#ffffff" name="theme-color" />
 
       {/*Link to various favicon files for different platforms and devices */}
-      <link
-        href="/favicons/favicon-48x48.png"
-        rel="icon"
-        sizes="48x48"
-        type="image/png"
-      />
-      <link href="/favicons/favicon.svg" rel="icon" type="image/svg+xml" />
-      <link href="/favicons/favicon.ico" rel="shortcut icon" />
-      <link
-        href="/favicons/apple-touch-icon.png"
-        rel="apple-touch-icon"
-        sizes="180x180"
-      />
-      <link href="/favicons/site.webmanifest" rel="manifest" />
+      {/*<link*/}
+      {/*  href="/favicons/favicon-48x48.png"*/}
+      {/*  rel="icon"*/}
+      {/*  sizes="48x48"*/}
+      {/*  type="image/png"*/}
+      {/*/>*/}
+      {/*<link href="/favicons/favicon.svg" rel="icon" type="image/svg+xml" />*/}
+      {/*<link href="/favicons/favicon.ico" rel="shortcut icon" />*/}
+      {/*<link*/}
+      {/*  href="/favicons/apple-touch-icon.png"*/}
+      {/*  rel="apple-touch-icon"*/}
+      {/*  sizes="180x180"*/}
+      {/*/>*/}
+      {/*<link href="/favicons/site.webmanifest" rel="manifest" />*/}
 
       {/*Page title that appears on the browser tab */}
       <title>React Boilerplate</title>

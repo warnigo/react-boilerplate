@@ -1,9 +1,9 @@
-import { type FCRC } from "@shared/types"
+import { type FC, type PropsWithChildren } from "react"
 
 import { AntdProvider } from "./AntdProvider"
 import { QueryProvider } from "./QueryProvider"
 
-export const Provider: FCRC = ({ children }) => (
+export const Provider: FC<PropsWithChildren> = ({ children }) => (
   <AntdProvider>
     <QueryProvider>{children}</QueryProvider>
   </AntdProvider>

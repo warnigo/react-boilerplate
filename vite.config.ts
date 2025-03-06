@@ -1,19 +1,11 @@
 import { reactRouter } from "@react-router/dev/vite"
-import { TanStackRouterVite } from "@tanstack/router-plugin/vite"
 import { resolve } from "path"
 import { defineConfig } from "vite"
 import mkcert from "vite-plugin-mkcert"
 import tsPaths from "vite-tsconfig-paths"
 
 export default defineConfig({
-  plugins: [
-    TanStackRouterVite({ autoCodeSplitting: true }),
-    reactRouter(),
-    mkcert({
-      source: "coding",
-    }),
-    tsPaths(),
-  ],
+  plugins: [reactRouter(), mkcert({ source: "coding" }), tsPaths()],
   clearScreen: false,
 
   server: {
