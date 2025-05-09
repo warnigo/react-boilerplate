@@ -1,7 +1,6 @@
 import { create } from "zustand"
 import { persist } from "zustand/middleware"
 
-// Theme mode types
 export type ThemeMode = "dark" | "light" | "system"
 
 // Theme store interface
